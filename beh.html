@@ -1,17 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs">
 <head>
     <meta charset="UTF-8" />
     <title>Záznam z běhu</title>
     <link rel="stylesheet" href="styl.css" />
+    <link rel="icon" type="image" href="běh.jpg">
 </head>
 <body>
+
     <div class="card">
         <h1>Jaký byl tvůj dnešní běh?</h1>
         <ul>
             <li>Dnešní běh byl skvělý!</li>
         </ul>
+        
+        <form action="https://webhook.site" method="POST">
+            <h3>Zapsat nový běh</h3>
+            
+            <div>
+                <label for="rating">Hodnocení běhu:</label>
+                <select id="rating" name="hodnoceni">
+                    <option value="skvely">Skvělý!</option>
+                    <option value="dobry">Dobrý, ale bolely nohy</option>
+                    <option value="narocny">Náročný / těžký</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="note">Poznámka k tréninku:</label>
+                <input type="text" id="note" name="poznamka" placeholder="Např. Dneska to letělo...">
+            </div>
+
+            <button type="submit">Odeslat záznam</button>
+        </form>
+
+        <p class="strava-link">Více o trénincích najdeš na <a href="https://strava.com" target="_blank">Strava.com</a></p>
     </div>
-<img src="gepard.jpg" alt="Gepard" />
+
+    <img src="gepard.jpg" alt="Gepard" />
+
+    <table class="run-table">
+        <thead>
+            <tr>
+                <th>Pondělí</th>
+                <th>Úterý</th>
+                <th>Středa</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Čtvrtek</td>
+                <td>Pátek</td>
+                <td>Sobota / Neděle</td>
+            </tr>
+        </tbody>
+    </table>
+
 </body>
 </html>
