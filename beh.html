@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>Záznam z běhu</title>
-    <link rel="stylesheet" href="styl.css" />
-    <link rel="icon" type="image" href="běh.jpg">
+    <link rel="stylesheet" href="styl.css">
+    <link rel="icon" href="beh.jpg">
 </head>
 <body>
 
-    <div class="card">
+    <div class="karta">
         <h1>Jaký byl tvůj dnešní běh?</h1>
+        
         <ul>
             <li>Dnešní běh byl skvělý!</li>
         </ul>
@@ -17,43 +18,44 @@
         <form action="https://webhook.site" method="POST">
             <h3>Zapsat nový běh</h3>
             
-            <div>
-                <label for="rating">Hodnocení běhu:</label>
-                <select id="rating" name="hodnoceni">
-                    <option value="skvely">Skvělý!</option>
-                    <option value="dobry">Dobrý, ale bolely nohy</option>
-                    <option value="narocny">Náročný / těžký</option>
-                </select>
-            </div>
+            <label for="hodnoceni">Hodnocení běhu:</label><br>
+            <select id="hodnoceni" name="hodnoceni">
+                <option value="skvely">Skvělý!</option>
+                <option value="dobry">Dobrý, ale bolely nohy</option>
+                <option value="narocny">Náročný / těžký</option>
+            </select>
+            <br><br>
 
-            <div>
-                <label for="note">Poznámka k tréninku:</label>
-                <input type="text" id="note" name="poznamka" placeholder="Např. Dneska to letělo...">
-            </div>
+            <label for="poznamka">Poznámka k tréninku:</label><br>
+            <input type="text" id="poznamka" name="poznamka">
+            <br><br>
 
             <button type="submit">Odeslat záznam</button>
         </form>
 
-        <p class="strava-link">Více o trénincích najdeš na <a href="https://strava.com" target="_blank">Strava.com</a></p>
+        <p class="odkaz">Více o trénincích najdeš na <a href="https://strava.com">Strava.com</a></p>
     </div>
 
-    <img src="gepard.jpg" alt="Gepard" />
+    <br>
+    <img src="gepard.jpg" alt="Gepard">
+    <br><br>
 
-    <table class="run-table">
-        <thead>
-            <tr>
-                <th>Pondělí</th>
-                <th>Úterý</th>
-                <th>Středa</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Čtvrtek</td>
-                <td>Pátek</td>
-                <td>Sobota / Neděle</td>
-            </tr>
-        </tbody>
+    <table class="tabulka" border="1">
+        <tr>
+            <th>Nejlepší</th>
+            <th>Dobrý</th>
+            <th>Nic moc</th>
+        </tr>
+        <tr>
+            <td>Rychlý běh bez únavy</td>
+            <td>Pohodové tempo, trochu bolely nohy</td>
+            <td>Těžké nohy, málo energie</td>
+        </tr>
+        <tr>
+            <td>Nový osobní rekord</td>
+            <td>Splněný plánovaný trénink</td>
+            <td>Krátký běh, špatné počasí</td>
+        </tr>
     </table>
 
 </body>
